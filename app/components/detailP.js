@@ -59,6 +59,7 @@ export default class DetailPScreen extends Component {
                     />
                   </View>
                 </TouchableWithoutFeedback>
+                
               </View>
               
 
@@ -166,10 +167,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
+
+
+
+
   backbutton: {
      height:32,
     width:32,
         marginLeft: 15,
 
+  },
+  searchbutton: {
+     height:32,
+    width:32,
+        marginRight: 15,
   }
 });
