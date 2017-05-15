@@ -22,5 +22,3 @@ export default class bccMusic extends Component {
   }
 }
 
-
-AppRegistry.registerComponent('bccMusic', () => bccMusic);

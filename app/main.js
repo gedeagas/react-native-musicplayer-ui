@@ -7,28 +7,61 @@ import {
   Dimensions,
   Image,
   ScrollView,
-  StatusBar
+  StatusBar,
+  TouchableOpacity
 } from 'react-native';
+
+//Import Navigator
+import { StackNavigator } from 'react-navigation';
+
+
+//Animation and Gradient Library
 import LinearGradient from 'react-native-linear-gradient';
+import Animation from 'lottie-react-native';
+
+//Import Another Screen 
+import DetailScreen from './components/detail';
+import DetailPScreen from './components/detailP';
+
 var {height, width} = Dimensions.get('window');
 export default class Main extends Component {
+  static navigationOptions = {
+    title: 'Home',
+    header: null
+  };
+  componentDidMount() {
+    this.animation.play();
+  }
+
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <StatusBar
           backgroundColor="rgba(7, 45, 64, 0.5)"
-          translucent={true}
+          hidden={true}
           barStyle="light-content"
         />
         <ScrollView
         showsVerticalScrollIndicator={false}
         >   
-
+            <View style={styles.animationContainer}>
+               <Animation
+                  ref={animation => { this.animation = animation; }}
+                  loop={true}
+                  style={{
+                    width: 60,
+                    height: 60,
+                  }}
+                  source={require('./assets/animation/logo.json')}
+                />
+            </View>
 
             <Image
               style={styles.headerImg}
               source={require('./assets/weekend.jpg')}
             />
+            
             <LinearGradient
             locations={[0.1,0.6,1]}
             colors={['rgba(7, 45, 64, 0)', '#072C3E', '#072C3E']}
@@ -45,7 +78,9 @@ export default class Main extends Component {
                   style={styles.albumScrollContainer}>
                       
 
-                      <View>
+                      <TouchableOpacity onPress={() =>
+                        navigate('Detail', { name: 'Jane' })
+                      }>
                           <Image
                           style={styles.albumScrollImg}
                           source={require('./assets/2.png')}
@@ -64,16 +99,18 @@ export default class Main extends Component {
                             </View>
                 
                           </View>
-                      </View>
+                      </TouchableOpacity>
 
-                      <View>
+                      <TouchableOpacity onPress={() =>
+                        navigate('DetailP', { name: 'Jane' })
+                      }>
                           <Image
                           style={styles.albumScrollImg}
-                          source={require('./assets/3.jpg')}
+                          source={require('./assets/paramore.png')}
                           />
                           <View style={styles.albumTextContainer}>
                             <View>
-                              <Text style={styles.albumTextTitle}>Beauty Behind</Text>
+                              <Text style={styles.albumTextTitle}>After Laughter</Text>
                               <Text style={styles.albumTextYear}>2015</Text>
                             </View>
 
@@ -82,7 +119,7 @@ export default class Main extends Component {
                             </View>
                 
                           </View>
-                      </View>
+                      </TouchableOpacity>
 
                       <View>
                           <Image
@@ -113,7 +150,7 @@ export default class Main extends Component {
                     />
                     <View style={styles.smallAlbumTextContainer}>
                       <Text style={styles.albumTextTitle}>Sign Of Times</Text>
-                      <Text style={styles.albumTextYear}>2017</Text>
+                      <Text style={styles.albumTextYear}>Harry Styles</Text>
                     </View>
                   </View>
 
@@ -124,12 +161,102 @@ export default class Main extends Component {
                     />
                     <View style={styles.smallAlbumTextContainer}>
                       <Text style={styles.albumTextTitle}>Told You So</Text>
-                      <Text style={styles.albumTextYear}>2017</Text>
+                      <Text style={styles.albumTextYear}>Paramore</Text>
                     </View>
                   </View>
-                  
 
+                  <View style={styles.smallAlbumContainer}>
+                    <Image
+                      style={styles.smallAlbum}
+                      source={require('./assets/imtheone.jpg')}
+                    />
+                    <View style={styles.smallAlbumTextContainer}>
+                      <Text style={styles.albumTextTitle}>I'm The Best</Text>
+                      <Text style={styles.albumTextYear}>DJ Khaled</Text>
+                    </View>
+                  </View>
+
+                  <View style={styles.smallAlbumContainer}>
+                    <Image
+                      style={styles.smallAlbum}
+                      source={require('./assets/6lack.jpg')}
+                    />
+                    <View style={styles.smallAlbumTextContainer}>
+                      <Text style={styles.albumTextTitle}>PRBLMS</Text>
+                      <Text style={styles.albumTextYear}>6LACK</Text>
+                      <Image
+                              style={styles.albumExpli}
+                              source={require('./assets/expli.jpg')}
+                              />
+                    </View>
+                  </View>
+    
                 </View>
+
+                <Text style={styles.homeSideTitle}>R E C E N T L Y  P L A Y E D</Text>
+                 <ScrollView
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  style={styles.albumScrollContainer}>
+                      
+
+                      <TouchableOpacity onPress={() =>
+                        navigate('Detail', { name: 'Jane' })
+                      }>
+                          <Image
+                          style={styles.roundedScrollImg}
+                          source={require('./assets/bruno.jpg')}
+                          />
+                          <View style={styles.albumTextContainerCenter}>
+                            <View>
+                              <Text style={styles.albumTextTitle}>Bruno Mars</Text>
+                            </View>
+
+                            <View>
+                             
+                            </View>
+                
+                          </View>
+                      </TouchableOpacity>
+
+                      <View>
+                          <Image
+                          style={styles.roundedScrollImg}
+                          source={require('./assets/ed.jpg')}
+                          />
+                          <View style={styles.albumTextContainerCenter}>
+                            <View>
+                              <Text style={styles.albumTextTitle}>Ed Sheeran</Text>
+                            </View>
+
+                            <View>
+                              
+                            </View>
+                
+                          </View>
+                      </View>
+
+                      <View>
+                          <Image
+                          style={styles.roundedScrollImg}
+                          source={require('./assets/cr.jpg')}
+                          />
+                          <View style={styles.albumTextContainerCenter}>
+                            <View>
+                              <Text style={styles.albumTextTitle}>Charlie Puth</Text>
+                            </View>
+
+                            <View>
+                             
+                            </View>
+                
+                          </View>
+                      </View>
+                     
+                  </ScrollView>
+
+                <Text style={styles.homeSideTitle}>R E C O M E N D E D</Text>
+
 
 
               </View>
@@ -205,8 +332,20 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     borderRadius: 7,
   },
-  
+  roundedScrollImg: {
+    height: 156,
+    width:156,
+    marginLeft: 10,
+    borderRadius: 78,
+  },
+   albumTextContainerCenter: {
+    flexDirection:'row',
+    justifyContent: 'center',
+    alignContent:'center',
+        marginLeft: 11,
+        marginTop: 10,
 
+  },
   albumTextContainer: {
     flexDirection:'row',
     justifyContent: 'space-between',
@@ -250,5 +389,21 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent: 'flex-start',
         marginBottom: 14,
-  }
+  },
+
+  animationContainer: {
+      zIndex:90,
+      alignSelf:'center',
+      backgroundColor: 'rgba(255, 255, 255, 0.0)',
+      marginTop:0,
+      position:'absolute'
+
+  },
 });
+const bccMusic = StackNavigator({
+  Main: { screen: Main },
+  Detail: {screen: DetailScreen},
+  DetailP: {screen: DetailPScreen}
+});
+
+AppRegistry.registerComponent('bccMusic', () => bccMusic);
