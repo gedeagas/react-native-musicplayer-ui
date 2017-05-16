@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
   trackSubStyle: {
       fontFamily:'Raleway-Regular',
       fontSize: 13,
-      color: '#6E788C',
+      color: '#fff',
   },
     trackTitleStyle: {
     fontFamily:'Raleway-Medium',
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
   trackRuntimeStyle: {
     fontFamily:'Raleway-Bold',
       fontSize: 15,
-      color: '#6E788C',
+      color: '#fff',
   },
   trackBreakLine: {
     marginTop:15,

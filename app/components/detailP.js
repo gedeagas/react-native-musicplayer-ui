@@ -17,7 +17,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Animation from 'lottie-react-native';
 
 var {height, width} = Dimensions.get('window');
-export default class DetailPScreen extends Component {
+export default class DetailScreen extends Component {
 
   static navigationOptions = {
     title: 'Welcome',
@@ -59,7 +59,6 @@ export default class DetailPScreen extends Component {
                     />
                   </View>
                 </TouchableWithoutFeedback>
-                
               </View>
               
 
@@ -67,8 +66,8 @@ export default class DetailPScreen extends Component {
 
               <View style={styles.detailTitleContainer}>
                 <View>
-                  <Text style={styles.detailTitle}>After Laughter</Text>
-                  <Text style={styles.detailSubTitle}>Paramore</Text>
+                  <Text style={styles.detailTitle}>Starboy</Text>
+                  <Text style={styles.detailSubTitle}>The Weekend </Text>
                 </View>
                 <View style={styles.detailPlayButtonContainer}>
                       <View style={styles.detailPlayButton}>
@@ -84,6 +83,112 @@ export default class DetailPScreen extends Component {
             </LinearGradient>
 
             <View style={styles.detailContainer}>
+                
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>1</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>Starboy</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend (Feat. Daft Punk)</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>3.24</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>2</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>Party Monster</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>3.15</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>3</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>False Alarm</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>3.24</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>4</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>Reminder</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>3.39</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>5</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>Rockin'</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>3.54</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+                <View style={styles.trackListContainer}>
+                    <View style={styles.trackListNumber}>
+                      <Text style={styles.trackNumberStyle}>6</Text>
+                    </View>
+
+                    <View style={styles.tracklistTitle}>
+                    <Text style={styles.trackTitleStyle}>Secrets</Text>
+                    <Text style={styles.trackSubStyle}>The Weekend</Text>
+
+                    </View>
+
+                    <View style={styles.tracklistRuntime}>
+                      <Text style={styles.trackRuntimeStyle}>4.25</Text>
+                    </View>
+                </View>
+                <View style={styles.trackBreakLine}></View>
+
+
 
             </View>
         </ScrollView>
@@ -112,14 +217,15 @@ const styles = StyleSheet.create({
 
   },
   detailContainer: {
-    marginTop: -320,
+    marginTop: -350,
     zIndex:90,
-    backgroundColor: 'rgba(255, 255, 255, 0.0)',
+    backgroundColor: '#8278AA',
 
   },
   detailTitleContainer: {
     flexDirection:'row',
     justifyContent: 'space-between',
+    
   },
   detailTitle: {
      fontFamily:'Raleway-ExtraBold',
@@ -163,23 +269,60 @@ const styles = StyleSheet.create({
   topMenuContainer: {
           paddingTop:20,
           zIndex:99,
-           flexDirection:'row',
+    flexDirection:'row',
     justifyContent: 'space-between',
   },
 
+  //TrackList
+  trackListContainer: {
+    flexDirection:'row',
+    justifyContent: 'space-between',
+    marginRight: 15,
+    marginLeft: 15,
+  },
 
-
-
-
+  trackListNumber: {
+    flexShrink:1
+  },
+  tracklistTitle: {
+    marginLeft:35,
+    flex:5
+  },
+  tracklistRuntime: {
+    flexShrink:3
+  },
+  trackNumberStyle: {
+    fontFamily:'Raleway-Medium',
+      fontSize: 18,
+      color: '#fff',
+  },
+  trackSubStyle: {
+      fontFamily:'Raleway-Regular',
+      fontSize: 13,
+      color: '#fff',
+  },
+    trackTitleStyle: {
+    fontFamily:'Raleway-Medium',
+      fontSize: 16,
+      color: '#fff',
+  },
+  trackRuntimeStyle: {
+    fontFamily:'Raleway-Bold',
+      fontSize: 15,
+      color: '#fff',
+  },
+  trackBreakLine: {
+    marginTop:15,
+    marginBottom:20,
+    height:0,
+    backgroundColor:'rgba(255, 255, 255, 0.76)',
+     marginRight: 15,
+    marginLeft: 15,
+  },
   backbutton: {
      height:32,
     width:32,
         marginLeft: 15,
 
-  },
-  searchbutton: {
-     height:32,
-    width:32,
-        marginRight: 15,
   }
 });
