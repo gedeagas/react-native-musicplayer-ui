@@ -1,5 +1,5 @@
 # react-native-musicplayer-ui
-Pure javascript music player user interface prototype for React Native framework. I will add more views in the future. and feel free to use this
+🎧  Pure javascript music player user interface prototype for React Native framework. I will add more views in the future. and feel free to use this
 
 ## Run it locally
 

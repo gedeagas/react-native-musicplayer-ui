@@ -87,13 +87,13 @@ export default class Main extends Component {
             </Home>
                
 
-            <Animated.View                            // Special animatable View
+            <Animated.View                           
             style={{
               zIndex:901,
               marginBottom:0,
               bottom: 0,
               backgroundColor:'#222222',
-              height: this.state.drawerAnim,          // Bind opacity to animated value
+              height: this.state.drawerAnim,          
             }}>
               
                 <TouchableOpacity onPress={this.doAnimation.bind(this)}>
