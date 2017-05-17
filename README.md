@@ -14,10 +14,18 @@ To install, there are two steps:
   ```
 2. Run the project with react-native run command.
 
+Optional, 
+Because npm is not been able to recognize react native dependecy on v0.44 you may have to install lottie with yarn 
+todo so you can run this command ( in musicplayer directory )
+```bash
+  yarn add lottie-react-native
+  
+```
+
 The MIT License (MIT)
 =====================
 
-Copyleft © 2017 Agastya Darma Laksana
+Copyright © 2017 Agastya Darma Laksana
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
