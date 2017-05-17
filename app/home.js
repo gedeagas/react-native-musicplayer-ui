@@ -51,6 +51,7 @@ export default class Home extends Component {
         />
         <ScrollView
         showsVerticalScrollIndicator={false}
+        style={{marginBottom:55}}
         >   
             <View style={styles.animationContainer}>
                <Animation

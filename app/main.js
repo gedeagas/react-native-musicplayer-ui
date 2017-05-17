@@ -24,7 +24,11 @@ import DetailScreen from './components/detail';
 import DetailPScreen from './components/detailP';
 import Home from './home';
 
-var {height, width} = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
+const albumSize = width*0.75;
+const albumRounded = albumSize/2;
+
+
 export default class Main extends Component {
    constructor(props) {
     super(props);
@@ -93,9 +97,11 @@ export default class Main extends Component {
               marginBottom:0,
               bottom: 0,
               backgroundColor:'#222222',
+                    justifyContent: 'flex-start',
+
               height: this.state.drawerAnim,          
             }}>
-              
+              <View style={styles.popupContainer1}>
                 <TouchableOpacity onPress={this.doAnimation.bind(this)}>
                   <View style={{padding: 15}}>
                         <Image
@@ -104,7 +110,23 @@ export default class Main extends Component {
                         />
                    </View>
                 </TouchableOpacity>
-             
+              </View>
+
+              <View style={styles.popupContainer2}>
+                    <Image
+                      style={{height:albumSize,width:albumSize,alignSelf:'center',borderRadius:10}}
+                      source={require('./assets/imagine.jpg')}
+                    />
+                   <Text style={styles.popupTextTitle}>Thunder</Text>
+                  <Text style={styles.popupTextYear}>Imagine Dragons</Text>
+
+
+              </View>
+
+              <View style={styles.popupContainer3}>
+
+              </View>
+
                 
             </Animated.View>
 
@@ -129,7 +151,7 @@ export default class Main extends Component {
 
               <View style={{marginRight: 15 }}>
                  <Image
-                      style={styles.upArrow}
+                      style={styles.playArrow}
                       source={require('./assets/play-arrow.png')}
                     />
               </View>
@@ -183,9 +205,40 @@ const styles = StyleSheet.create({
     color: '#fff'
   },
 
+   popupTextTitle: {
+    fontFamily:'Raleway-Bold',
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
+    alignSelf: 'center',
+    marginTop:16,
+  },
+  popupTextYear: {
+    fontFamily:'Raleway-Regular',
+    fontSize: 13,
+    color: '#fff',
+    alignSelf: 'center'
+
+  },
+
   upArrow: {
     width:20,
     height:20,
+  },
+
+  playArrow: {
+     width:27,
+    height:27,
+  },
+  popupContainer1: {
+    zIndex:1,
+  },
+  popupContainer2: {
+    zIndex:5,
+    marginTop:30
+  },
+  popupContainer3: {
+    zIndex:3,
   },
    container: {
     flex: 1,
