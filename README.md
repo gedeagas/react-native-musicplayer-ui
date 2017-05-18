@@ -1,3 +1,5 @@
+<img align="right" width="200" src="http://static.nfl.com/static/content/public/static/img/logos/react-helmet.jpg" />
+
 # react-native-musicplayer-ui
 🎧  Pure javascript music player user interface prototype for React Native framework. I will add more views in the future. and feel free to use this
 
