@@ -1,4 +1,4 @@
-<img align="right" width="200" src="http://static.nfl.com/static/content/public/static/img/logos/react-helmet.jpg" />
+<img align="right" width="200" src="https://media.giphy.com/media/26gR2bHZfR6CAGOcw/giphy.gif" />
 
 # react-native-musicplayer-ui
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-requests)
