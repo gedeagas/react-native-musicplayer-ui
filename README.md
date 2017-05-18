@@ -31,8 +31,7 @@ The MIT License (MIT)
 =====================
 
 Copyright © 2017 Agastya Darma Laksana
-
-Copyright © 2017 Archipel
+Copyright © 2017 Corbin Scott
 
 
 Permission is hereby granted, free of charge, to any person
