@@ -27,12 +27,31 @@ Todo so you can run this command ( in musicplayer directory )
   yarn add lottie-react-native
 ```
 
+## Contributing to this project
+
+Please take a moment to review this document in order to make the contribution
+process easy and effective for everyone involved.
+
+_**Please Note:** These guidelines are adapted from [@necolas](https://github.com/necolas)'s
+[issue-guidelines](https://github.com/necolas/issue-guidelines) and serve as
+an excellent starting point for contributing to any open source project._
+
+<a name="pull-requests"></a>
+### Pull requests
+
+Good pull requests - patches, improvements, new features - are a fantastic
+help. They should remain focused in scope and avoid containing unrelated
+commits.
+
+**Please ask first** before embarking on any significant pull request (e.g.
+implementing features, refactoring code, porting to a different language),
+otherwise you risk spending a lot of time working on something that the
+project's developers might not want to merge into the project.
+
 The MIT License (MIT)
 =====================
 
 Copyright © 2017 Agastya Darma Laksana
-
-Copyright © 2017 Corbin Scott
 
 
 Permission is hereby granted, free of charge, to any person
