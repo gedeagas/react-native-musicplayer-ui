@@ -7,6 +7,8 @@
 
 I will add more views in the future. and feel free to use this
 
+![demo](https://media.giphy.com/media/l0Iyqj6N5cPLUkbgQ/giphy.gif)
+
 ## Run it locally
 
 To install, there are two steps:
