@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
 
   },
   detailContainer: {
-    marginTop: -350,
+    marginTop: -320,
     zIndex:90,
     backgroundColor: '#203053',
 

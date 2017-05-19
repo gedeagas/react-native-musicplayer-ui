@@ -22,6 +22,7 @@ import { StackNavigator } from 'react-navigation';
 //Import Another Screen 
 import DetailScreen from './components/detail';
 import DetailPScreen from './components/detailP';
+import LoginScreen from './components/login';
 import Home from './home';
 
 const {height, width} = Dimensions.get('window');
@@ -54,6 +55,15 @@ export default class Main extends Component {
     
   }
 
+  login(){
+    console.log("logging in... ");
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+    this.setState({
+        loggedIn: true,
+        loading: false
+    });
+   }
+
   componentWillUpdate() {
     LayoutAnimation.easeInEaseOut();
   }
@@ -84,7 +94,7 @@ export default class Main extends Component {
     }
   }
   render() {
-     if(this.state.loggedIn === false){
+     if(this.state.loggedIn === true){
         return (
           <View style={styles.container}>
             <Home navigation={this.props.navigation}>
@@ -165,13 +175,8 @@ export default class Main extends Component {
         );
       } else {
             return (
-            <View>
-                <Home navigation={this.props.navigation}>
-                </Home>
-
-                <View style={styles.absoluteBottom}>
-                </View>
-            </View>
+            <LoginScreen login={this.login.bind(this)}>
+            </LoginScreen>
             
             );
      }
@@ -248,6 +253,7 @@ const styles = StyleSheet.create({
 const bccMusic = StackNavigator({
   Main: { screen: Main },
   Home: { screen: Home },
+  Login: { screen: LoginScreen},
   Detail: {screen: DetailScreen},
   DetailP: {screen: DetailPScreen}
 });
